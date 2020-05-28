@@ -1,3 +1,5 @@
+const Layout = require('./layout')
+
 const addCSSRules = require("./addCSSRules");
 
 let currentToken = null;
@@ -128,15 +130,16 @@ function emit(token) {
 
     currentTextNode = null;
   } else if (token.type == "endTag") {
-    if (top.tagName != token.tagName) {
-      throw new Error("Tag start end doesn't match!");
+    if (top.tagName !== tocken.tagName) {
+      throw new Error('tag not match')
     } else {
-      if (top.tagName === "style") {
-        rules = addCSSRules(top.children[0].content);
+      if (top.tagName === 'style') {
+        CSS.addCSSRules(top.children[0].content)
       }
+      Layout.layout(top)
       stack.pop();
     }
-    currentTextNode = null;
+    curTextNode = null;
   } else if (token.type == "text") {
     if (currentTextNode == null) {
       currentTextNode = {
