@@ -191,11 +191,11 @@ function match(selector, element) {
   console.log(compare(selectorObj, element))
 }
 
-match("body div #id.class", document.getElementById("id"));
+// match("body div #id.class", document.getElementById("id"));
 // match("body #id.class", document.getElementById("id"));
 // match("div #id.class", document.getElementById("id"));
 // match("div>#id.class", document.getElementById("id"));
 // match("div #id.class+p~span", document.getElementById("id"));
 // match("div div>#id.class", document.getElementById("id"));
 // match("div div>#id.class+p", document.getElementById("id"));
-// match("div div>#id.class+p~span", document.getElementById("id"));
+match("div div>#id.class+p~span", document.getElementById("id"));
