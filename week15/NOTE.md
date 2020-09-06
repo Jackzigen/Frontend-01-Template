@@ -8,7 +8,3 @@
 4. 增加了对循环播放动画的支持。
 5. 为每个动画增加了唯一key值参数，用来为动画做标识。
 
-查看修改内容的方法：
-
-1. 对比\week15\component_after_class_carousel\carousel.js与\week14\component_after_class_carousel\carousel.js两个文件。
-2. 对比\week15\component_after_class_carousel\animation.js与\week15\animation\animation.js两个文件。
